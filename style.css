@@ -12,6 +12,7 @@ html {
 body {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: white;
+    padding-top: 100px;
 }
 
 /* HEADER */
@@ -76,12 +77,11 @@ nav a:hover::after {
 
 /* SECTION */
 section {
-    padding: 100px 20px;
+    padding: 80px 20px;
     min-height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 80px;
 }
 
 section h2 {
@@ -104,7 +104,6 @@ section h2 {
     background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(14, 165, 233, 0.1));
     border-radius: 15px;
     padding: 40px 20px;
-    margin-top: 60px;
 }
 
 .home h2 {
@@ -337,16 +336,22 @@ footer {
     font-size: 14px;
 }
 
-/* TABLET - Nếu cần responsive cho tablet */
+/* TABLET - Responsive cho tablet & desktop */
 @media (min-width: 769px) {
+    body {
+        padding-top: 0;
+    }
+
     header {
         padding: 20px 50px;
+        flex-wrap: nowrap;
     }
 
     nav {
         width: auto;
         margin-top: 0;
         gap: 30px;
+        justify-content: flex-end;
     }
 
     nav a {
@@ -355,7 +360,6 @@ footer {
 
     section {
         padding: 120px 50px;
-        margin-top: 0;
     }
 
     section h2 {
@@ -364,11 +368,14 @@ footer {
 
     .home {
         padding: 80px 50px;
-        margin-top: 0;
     }
 
     .home h1 {
         font-size: 60px;
+    }
+
+    .home h2 {
+        font-size: 32px;
     }
 
     .home p {
@@ -379,6 +386,7 @@ footer {
         flex-direction: row;
         padding: 40px;
         gap: 40px;
+        align-items: flex-start;
     }
 
     .cv-image {
@@ -419,5 +427,12 @@ footer {
     button {
         width: auto;
         padding: 14px 35px;
+        font-size: 16px;
+    }
+
+    .social a {
+        width: 60px;
+        height: 60px;
+        font-size: 35px;
     }
 }
