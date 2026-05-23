@@ -9,21 +9,16 @@ html {
     scroll-behavior: smooth;
 }
 
-/* =========================
-   HEADER HEIGHT VARIABLE
-========================= */
 :root {
-    --header-height: 90px;
+    header-height: 90px;
 }
 
-/* BODY */
 body {
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     color: white;
     padding-top: var(--header-height); /* FIX CHE CHỮ */
 }
 
-/* HEADER */
 header {
     position: fixed;
     top: 0;
@@ -49,7 +44,7 @@ header {
     font-weight: bold;
 }
 
-/* NAV */
+
 nav {
     display: flex;
     gap: 20px;
@@ -71,12 +66,12 @@ nav a:hover {
     color: #38bdf8;
 }
 
-/* SECTION */
+
 section {
     padding: 80px 20px;
 }
 
-/* HOME */
+
 .home {
     text-align: center;
     padding: 40px 20px;
@@ -96,7 +91,7 @@ section {
     color: #cbd5e1;
 }
 
-/* CV */
+
 .cv-container {
     display: flex;
     flex-direction: column;
@@ -131,7 +126,7 @@ section {
     border-radius: 8px;
 }
 
-/* PROJECT */
+
 .project-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -144,7 +139,7 @@ section {
     border-radius: 10px;
 }
 
-/* SOCIAL */
+
 .social {
     display: flex;
     justify-content: center;
@@ -156,19 +151,17 @@ section {
     font-size: 24px;
 }
 
-/* FOOTER */
+
 footer {
     text-align: center;
     padding: 20px;
     background: #0f172a;
 }
 
-/* =========================
-   RESPONSIVE TABLET + PC
-========================= */
+
 @media (min-width: 768px) {
 
-    /* HEADER HEIGHT SAME */
+
     :root {
         --header-height: 90px;
     }
