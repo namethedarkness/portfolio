@@ -137,43 +137,75 @@ section h2 {
 
 .cv-container {
     display: flex;
-    gap: 40px;
-    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
+}
+
+.cv-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(56, 189, 248, 0.5);
+    max-width: 900px;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.cv-card:hover {
+    transform: translateY(-6px);
+}
+
+.cv-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cv-image img {
     width: 200px;
     height: 200px;
-    border-radius: 15px;
-    border: 3px solid var(--primary-color);
+    border-radius: 50%;
     object-fit: cover;
+    border: 3px solid rgba(56,189,248,0.5);
 }
 
 .cv-info {
-    background: rgba(255, 255, 255, 0.03);
-    padding: 25px;
-    border-radius: 12px;
-    border: 1px solid rgba(56, 189, 248, 0.2);
-    min-width: 280px;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .cv-info h3 {
     color: var(--primary-color);
-    margin-bottom: 10px;
 }
 
 .cv-info p {
     color: var(--text-secondary);
-    margin: 8px 0;
-    font-size: 17px;
-    line-height: 1.8;
 }
 
 .cv-info i {
     color: var(--primary-color);
     margin-right: 8px;
+}
+
+.cv-info ul {
+    color: var(--text-secondary);
+    padding-left: 18px;
+}
+
+@media (max-width: 768px) {
+    .cv-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cv-info {
+        align-items: center;
+    }
 }
 
 .skills {
