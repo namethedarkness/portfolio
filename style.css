@@ -167,19 +167,19 @@ section h2 {
 .cv-info p {
     color: var(--text-secondary);
     margin: 8px 0;
+    font-size: 17px;
+    line-height: 1.8;
 }
 
-.cv-info ul {
-    margin-top: 10px;
+.cv-info i {
+    color: var(--primary-color);
+    margin-right: 8px;
 }
 
-.cv-info li {
-    list-style: none;
-    padding: 8px 12px;
-    margin: 6px 0;
-    background: rgba(56, 189, 248, 0.08);
-    border-left: 3px solid var(--primary-color);
-    border-radius: 6px;
+.skills {
+    color: #38bdf8;
+    font-weight: 600;
+    font-size: 18px;
 }
 
 .project-container {
