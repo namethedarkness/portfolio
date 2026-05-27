@@ -131,6 +131,26 @@ section h2 {
     line-height: 1.6;
 }
 
+.home button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: var(--primary-color);
+    color: var(--bg-dark);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    align-self: center;
+}
+
+.home button:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+}
+
 .cv-container {
     display: flex;
     flex-direction: column;
@@ -156,6 +176,18 @@ section h2 {
     flex: 1;
 }
 
+.cv-info h3 {
+    font-size: 24px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.cv-info p {
+    color: var(--text-secondary);
+    margin: 10px 0;
+    line-height: 1.8;
+}
+
 .cv-info i {
     color: var(--primary-color);
     margin-right: 10px;
@@ -174,6 +206,7 @@ section h2 {
     border-radius: 8px;
     border-left: 3px solid var(--primary-color);
     transition: all 0.3s ease;
+    color: var(--text-secondary);
 }
 
 .cv-info li:hover {
@@ -183,8 +216,9 @@ section h2 {
 
 .project-container {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: 25px;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    width: 100%;
 }
 
 .card-link {
@@ -202,6 +236,8 @@ section h2 {
     backdrop-filter: blur(10px);
     cursor: pointer;
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
@@ -220,6 +256,7 @@ section h2 {
     color: var(--text-secondary);
     line-height: 1.6;
     margin-bottom: 15px;
+    flex-grow: 1;
 }
 
 .btn-view {
@@ -227,10 +264,11 @@ section h2 {
     padding: 10px 20px;
     background: var(--primary-color);
     color: var(--bg-dark);
+    text-decoration: none;
     border-radius: 6px;
     font-weight: 600;
     transition: all 0.3s ease;
-    cursor: pointer;
+    align-self: flex-start;
 }
 
 .card-link:hover .btn-view {
@@ -238,6 +276,7 @@ section h2 {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
 }
+
 .social {
     display: flex;
     justify-content: center;
@@ -279,10 +318,6 @@ footer p {
 }
 
 @media (min-width: 768px) {
-    :root {
-        --header-height: 90px;
-    }
-
     header {
         flex-wrap: nowrap;
         padding: 15px 50px;
@@ -323,15 +358,26 @@ footer p {
     }
 
     .project-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .home h1 {
+        font-size: 36px;
+    }
+
+    nav {
+        gap: 20px;
     }
 }
 
 @media (min-width: 1024px) {
-    .project-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
     section {
         padding: 120px 80px;
     }
