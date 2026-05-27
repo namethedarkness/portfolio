@@ -230,6 +230,7 @@ section h2 {
     border-radius: 6px;
     font-weight: 600;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 .card-link:hover .btn-view {
@@ -237,7 +238,6 @@ section h2 {
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
 }
-
 .social {
     display: flex;
     justify-content: center;
